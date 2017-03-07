@@ -1,3 +1,28 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  background-color: #C9C9C9;
+  font-size: 32px;
+  color: white;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.circle {
+  border-radius: 50%;
+  max-width: 80px;
+}

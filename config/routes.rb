@@ -1,18 +1,15 @@
 Rails.application.routes.draw do
-  get 'pages/index'
+  get 'tasks', to: "tasks#tasks"
 
-  get 'pages/show'
+  get 'tasks/new', to: "tasks#new"
+  post 'tasks', to: "tasks#create"
 
-  get 'pages/new'
+  get 'tasks/:id/edit', to: "tasks#edit", as: :edit_task
+  patch 'tasks/:id', to: "tasks#update"
 
-  get 'pages/create'
+  delete 'tasks/:id', to: "tasks#destroy"
 
-  get 'pages/edit'
-
-  get 'pages/update'
-
-  get 'pages/destroy'
+  get 'tasks/:id', to: "tasks#show"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :tasks
 end

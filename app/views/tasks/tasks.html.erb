@@ -1,0 +1,15 @@
+<h1>Welcome to the To Do List</h1>
+<% @tasks.each do |task| %>
+  <span>Task :</span><%= task.name %>
+  <p><%= task.content %></p>
+  <p><%= task.status %></p>
+  <span><%= link_to "Edit this task", edit_task_path(task) %></span> - <span><%= link_to "Delete this task", "tasks/destroy" %></span>
+  <h2>*</h2>
+<% end %>
+
+<%= link_to "Create a new task !", "tasks/new" %>
+
+<hr>
+
+<img src ="https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg" class="circle">
+<p>Proudly designed by the best developer in the world (or not)</p>
